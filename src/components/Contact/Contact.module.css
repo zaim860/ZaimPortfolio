@@ -44,7 +44,36 @@
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 1.5px;
+    position: relative; /* Ensure proper positioning for pseudo-elements */
 }
+
+.link a:hover {
+    text-decoration: none; /* Remove default underline */
+}
+
+.link a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.link a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.link a span {
+    position: relative;
+    z-index: 1; /* Ensure text is above underline */
+}
+
 
 @media screen and (max-width: 830px) {
     .container {
