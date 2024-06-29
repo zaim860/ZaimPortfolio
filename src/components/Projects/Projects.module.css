@@ -15,20 +15,12 @@
 }
 
 .projects {
-    margin-top: 37px;
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap naturally */
-    justify-content: flex-start; /* Start new rows from the left */
-    gap: 15px;
-    width: 100%;
-  }
-  
-  .title + .projects {
-    margin-top: 20px; /* Increase margin between title and projects */
-  }
-  
-  .title + .title {
-    margin-top: 40px; /* Increase margin between titles */
-  }
-  
-  
+  margin-top: 37px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}

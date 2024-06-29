@@ -3,75 +3,49 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   border-radius: 10px;
   background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
   box-shadow: 0 16px 14px 0 #04152d;
-  padding: 40px;
-  max-width: calc(33.33% - 15px); /* Calculate width for 3 items per row */
-  height: 700px;
-  margin-bottom: 30px; /* Increased margin between ProjectCards */
+  padding: 18px 24px;
+  max-width: 345px;
 }
 
-  
-  @media (max-width: 1200px) {
-    .container {
-      max-width: calc(50% - 15px); /* Two items per row on smaller screens */
-    }
-  }
-  
-  @media (max-width: 800px) {
-    .container {
-      max-width: 100%; /* One item per row on small screens */
-    }
-  }
-  
-  
-  
-
 .image {
-  width: 100%;
-  height: 300px; /* Increased height for the image */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  margin-bottom: 24px; /* Increased margin */
+  margin-bottom: 26px;
 }
 
 .title {
-  font-size: 32px; /* Increased font size for the title */
+  font-size: 25px;
   font-weight: 700;
-  text-align: left; /* Align title to the left */
 }
 
 .description {
-  margin-top: 12px; /* Increased margin for better spacing */
-  font-size: 26px; /* Adjusted font size for the description */
+  margin-top: 6px;
+  font-size: 25px;
   font-weight: 400;
-  text-align: left; /* Align description to the left */
 }
 
 .skills {
   width: 100%;
-  margin-top: 20px; /* Increased margin for better spacing */
+  margin-top: 14px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
   list-style: none;
-  justify-content: center; /* Center align the skills */
 }
 
 .skill {
-  font-size: 26px; /* Increased font size for the skills */
+  font-size: 25px;
   font-weight: 400;
   border-radius: 100px;
   background: var(--color-dark);
-  padding: 6px 20px; /* Adjusted padding */
+  padding: 2px 22px;
 }
 
 .links {
   width: 100%;
-  margin-top: 24px; /* Increased margin for better spacing */
+  margin-top: 26px;
   display: flex;
   justify-content: space-around;
 }
@@ -79,9 +53,9 @@
 .link {
   text-decoration: none;
   color: var(--color-text);
-  font-size: 28px; /* Adjusted font size for the links */
+  font-size: 30px;
   font-weight: 600;
   border-radius: 100px;
   background: var(--color-primary);
-  padding: 4px 28px; /* Adjusted padding */
+  padding: 1px 22px;
 }
