@@ -1,0 +1,21 @@
+[
+    {
+      "title": "To do list",
+      "imageSrc": "projects/todolist.png",
+      "description": "This is my first solo programming project and it is mainly for self learning and getting used to using React",
+      "skills": ["React", "JavaScript"],
+      "demo": "https://zaim860.github.io/zaimToDoList/",
+      "source": "https://github.com/zaim860/zaimToDoList"
+    },
+   
+    {
+      "title": "Portfolio",
+      "imageSrc": "projects/port.png",
+      "description": "I wanted to make a project that i would acutally use so i decided to make this portfolio with code",
+      "skills": ["React", "JavaScript"],
+      "source": "https://www.github.com"
+    }
+    
+    
+    
+  ]

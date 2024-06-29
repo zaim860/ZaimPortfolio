@@ -1,0 +1,17 @@
+[
+    
+    {
+      "role": "Intern Full-Stack Web Developer",
+      "organisation": "First World Tech",
+      "startDate": "October, 2023",
+      "endDate": "April, 2024",
+      "experiences": [
+        "Created functions based on the client needs",
+        "Bug-fixing and maintenance of the site",
+        "Languages used: HTML/CSS | JavaScript | PHP | SQL"
+      ],
+      "imageSrc": "history/fwt.png"
+    }
+    
+    
+  ]

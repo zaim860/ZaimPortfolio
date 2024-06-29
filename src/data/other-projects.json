@@ -1,0 +1,24 @@
+[
+    {
+      "title": "Micro",
+      "imageSrc": "projects/Micro.png",
+      "description": "This is a food recipe app where users can easily search for popular italin cousine recipes ",
+      "skills": ["Adobe XD"],
+      "demo": "https://www.youtube.com/watch?v=1S7O6X7kXRE",
+      "source": "https://drive.google.com/drive/folders/19-3mgadxqphLqgpPQg70nSB23oetVbFj?usp=sharing"
+    },
+    {
+     "title": "Unique Tee",
+      "imageSrc": "projects/Shopr.png",
+      "description": "A simple UI design of a page to buy a shirt in a phone format ",
+      "skills": ["Adobe XD", "Photoshop"],
+      "source": "https://drive.google.com/drive/folders/1fquKN6IWf1B5FeSUFMBOjFoiIBSxs82p?usp=sharing"
+    },
+    {
+      "title": "Gamate",
+      "imageSrc": "projects/gamate1.png",
+      "description": "A mobile app where users can choose a boosting service for a game that they play to get a better rank  ",
+      "skills": ["Adobe XD"],
+      "source": "https://drive.google.com/drive/folders/1wukGHJr26OQaCiChnrbFdwowoTlTGa2t?usp=sharing"
+    }
+  ]
