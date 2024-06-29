@@ -42,8 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
 }
 
 .skillImageContainer img {
@@ -67,7 +67,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 17px;
+  gap: 10px;
   background: #19376d;
   background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
   border-radius: 10px;
@@ -75,7 +75,7 @@
 }
 
 .historyItem img {
-  width: 50px;
+  width: 100px;
 }
 
 .historyItemDetails {
@@ -95,7 +95,7 @@
 .historyItemDetails ul {
   margin-top: 6px;
   list-style-position: inside;
-  font-size: 25px;
+  font-size: 20px;
   list-style-type: disc;
   margin-left: 17px;
 }
@@ -108,7 +108,7 @@
   }
 
   .skills {
-    width: 100%;
+    width: 120%;
     flex-direction: row;
     justify-content: center;
   }
