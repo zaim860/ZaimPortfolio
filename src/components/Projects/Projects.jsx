@@ -23,5 +23,6 @@ export const Projects = () => {
         })}
       </div>
     </section>
+    
   );
 };
