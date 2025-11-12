@@ -32,7 +32,7 @@ export const About = () => {
             <img src={getImageUrl("about/serverIcon.png")} alt="server icon" />
             <div className={styles.aboutItemText}>
               <h3>A Technical Person</h3>
-              <p>I have a natural aptitude for programming and technical problem-solving. While I appreciate creativity, my strengths lie 
+              <p>I have a natural aptitude for programming and technical problem-solving. While I appreciate creativity, my strength lie 
                 in analytical thinking, coding, and technical execution</p>
             </div>
           </li>
