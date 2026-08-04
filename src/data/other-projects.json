@@ -8,17 +8,12 @@
       "source": "https://drive.google.com/drive/folders/19-3mgadxqphLqgpPQg70nSB23oetVbFj?usp=sharing"
     },
     {
-     "title": "Unique Tee",
-      "imageSrc": "projects/Shopr.png",
-      "description": "A simple UI design of a page to buy a shirt in a phone format ",
-      "skills": ["Adobe XD", "Photoshop"],
-      "source": "https://drive.google.com/drive/folders/1fquKN6IWf1B5FeSUFMBOjFoiIBSxs82p?usp=sharing"
-    },
-    {
-      "title": "Gamate",
-      "imageSrc": "projects/gamate1.png",
-      "description": "A mobile app where users can choose a boosting service for a game that they play to get a better rank  ",
-      "skills": ["Adobe XD"],
-      "source": "https://drive.google.com/drive/folders/1wukGHJr26OQaCiChnrbFdwowoTlTGa2t?usp=sharing"
+     "title": "StudyFi",
+      "imageSrc": "projects/studyfi.png",
+      "description": "A AI assisted study platform that allows users to create and share their own flashcards and quizzes.",
+      "skills": ["Figma", "Photoshop"],
+      "demo": "https://www.figma.com/proto/OfE0wf0pz18zmJtvuTXTOt/Group-4-Prototype?node-id=2-777&t=ETm66p76Z3IITgt5-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=27%3A497&show-proto-sidebar=1",
+      "source": "https://www.figma.com/design/OfE0wf0pz18zmJtvuTXTOt/Group-4-Prototype?node-id=0-1&t=muhDSDuaWdaRNYyb-1"
     }
+    
   ]

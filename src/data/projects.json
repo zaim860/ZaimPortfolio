@@ -19,7 +19,7 @@
      {
       "title": "Wellness Platform",
       "imageSrc": "projects/valayria.png",
-      "description": "I wanted to make a project that i would actually use so i decided to make this portfolio with code",
+      "description": "A wellness platform that is gamified to allow users to be more engaged.",
       "skills": ["React", "JavaScript"],
       "source": "https://github.com/zaim860/ZaimPortfolio"
     }
