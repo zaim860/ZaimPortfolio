@@ -1,4 +1,4 @@
-import { education, achievements } from "@/data/portfolio";
+import { education, achievements, certsLink } from "@/data/portfolio";
 import Panel from "./Panel";
 import Section from "./Section";
 
@@ -28,6 +28,13 @@ export default function Education() {
               </li>
             ))}
           </ul>
+          {certsLink.href && (
+            <div className="hero__links">
+              <a className="btn btn--yellow" href={certsLink.href} target="_blank" rel="noreferrer">
+                {certsLink.label}
+              </a>
+            </div>
+          )}
         </Panel>
       </div>
     </Section>

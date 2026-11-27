@@ -39,6 +39,10 @@ export const achievements = [
   { title: "Eagles Award", detail: "x1" },
   { title: "Edusave Certificate OF Academic Achievement", detail: "x1" }
 ];
+export const certsLink = {
+  label: "View all certificates",
+  href: "https://drive.google.com/drive/folders/1Fzj1BAHTV9Dm3fjJbybbIv9T9HyE-hun?usp=sharing",
+};
 
 export type Testimonial = {
   quote: string;
