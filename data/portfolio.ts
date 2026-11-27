@@ -90,7 +90,7 @@ export const projects = [
     title: "Wellness Platform",
     description: "A wellness platform that is gamified to allow users to be more engaged..",
     tags: ["HTML/CSS", "JavaScript", "SQL"],
-    links: [{ label: "Code", href: "https://github.com/zaim860/valyria" }] as Link[],
+    links: [{ label: "Source", href: "https://github.com/zaim860/valyria" }] as Link[],
   },
   {
     title: "Project Three",
