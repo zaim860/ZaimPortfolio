@@ -23,7 +23,7 @@ export const education = [
     school: "Singapore Polytechnic",
     qualification: "Diploma in Information Technology",
     period: "2025 - Present",
-    details: ["Relevant modules: Fundamentals of Programming, CICD, Java Specialist, Web Development, Database Management, and more."],
+    details: ["Relevant modules: Fundamentals of Programming, CICD, Java Specialization, Web Development, Database Management, and more."],
   },
   {
     school: "ITE College West",
