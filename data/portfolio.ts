@@ -11,7 +11,8 @@ export const profile = {
     "Hi! I'm a student who loves history, games and any kinds of technology and like to see how things work",
   avatar: "", // e.g. "/me.jpg" (put the file in /public). Leave "" to show a comic burst instead.
   links: [
-    { label: "Email", href: "mailto:zaimfadzly@gmail.com" },
+    { label: "Personal Email", href: "mailto:zaimfadzly@gmail.com" },
+    { label: "School Email", href: "mailto:ZAFBYAHYA02.25@ichat.sp.edu.sg" },
     //{ label: "GitHub", href: "https://github.com/yourname" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/zaimfadzly/" },
   ] as Link[],
