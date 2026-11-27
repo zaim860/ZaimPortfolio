@@ -1,0 +1,316 @@
+:root {
+  --star: polygon(50% 0, 61% 14%, 79% 6%, 80% 25%, 98% 29%, 87% 45%, 100% 58%, 82% 66%, 86% 85%, 66% 82%, 57% 100%, 45% 85%, 27% 96%, 24% 77%, 4% 74%, 15% 57%, 0 42%, 19% 34%, 17% 14%, 37% 19%);
+  --ink: #000;
+  --paper: #fff;
+  --yellow: #ffd400;
+  --red: #e8272b;
+  --blue: #1f4fd8;
+  --shadow: 8px 8px 0 var(--ink);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { overflow-x: clip; }
+
+body {
+  font-family: var(--font-body), "Comic Sans MS", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background-color: var(--yellow);
+  /* halftone print dots */
+  background-image: radial-gradient(rgba(0, 0, 0, 0.16) 1.5px, transparent 1.6px);
+  background-size: 14px 14px;
+}
+
+h1, h2, h3, .hero__title, .btn, .issue {
+  font-family: var(--font-display), Impact, sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+h3 { font-size: 1.7rem; line-height: 1.1; margin-bottom: 0.4rem; }
+ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+li { margin-bottom: 0.25rem; }
+ul.plain { list-style: none; padding: 0; }
+ul.plain li { margin-bottom: 0.8rem; }
+.muted { opacity: 0.75; }
+
+.page { max-width: 1050px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+.section { margin-top: 4.5rem; }
+.stack { display: flex; flex-direction: column; gap: 1.75rem; }
+
+.grid { display: grid; gap: 3rem 1.75rem; }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+/* ---------- Panel ---------- */
+.panel {
+  --sh: var(--ink);
+  --rot: 0deg;
+  position: relative;
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--sh);
+  padding: 1.4rem;
+  transform: rotate(var(--rot));
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
+}
+.panel--ink { background: var(--ink); color: var(--paper); --sh: var(--red); }
+.panel--ink h3, .panel--ink strong { color: var(--yellow); }
+.panel--yellow { background: var(--yellow); }
+.panel--red { background: var(--red); color: var(--paper); }
+.panel--blue { background: var(--blue); color: var(--paper); }
+.tilt--left { --rot: -1deg; }
+.tilt--right { --rot: 1deg; }
+
+/* ---------- Section heading (caption box) ---------- */
+.caption {
+  display: inline-block;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  background: var(--red);
+  color: var(--paper);
+  border: 4px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  padding: 0.1rem 1rem;
+  margin-bottom: 2.75rem;
+  transform: rotate(-2deg);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+.hero__title {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--yellow);
+  padding: 0.1rem 0.8rem;
+  font-size: 1.4rem;
+  transform: rotate(-1.5deg);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hero__name {
+  display: inline-block;
+  font-size: clamp(3.2rem, 11vw, 6.5rem);
+  line-height: 0.95;
+  color: var(--red);
+  -webkit-text-stroke: 3px var(--ink);
+  paint-order: stroke fill;
+  text-shadow: 6px 6px 0 var(--ink);
+  margin: 0.6rem 0 1.5rem;
+}
+.hero__tagline { margin-top: 1.5rem; font-weight: 700; }
+.hero__links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+.hero__art { display: flex; justify-content: center; }
+.hero__photo img { display: block; width: 100%; max-width: 280px; }
+
+.burst {
+  display: grid;
+  place-items: center;
+  width: min(300px, 70vw);
+  aspect-ratio: 1;
+  background: var(--red);
+  color: var(--yellow);
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 3rem;
+  -webkit-text-stroke: 2px var(--ink);
+  text-shadow: 3px 3px 0 var(--ink);
+  clip-path: var(--star);
+  transform: rotate(-8deg);
+}
+.burst__b { display: none; }
+
+/* ---------- Speech bubble ---------- */
+.bubble {
+  position: relative;
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  border-radius: 28px;
+  padding: 1rem 1.25rem;
+  box-shadow: 6px 6px 0 var(--ink);
+  max-width: 34rem;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.bubble::after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  bottom: -26px;
+  width: 26px;
+  height: 26px;
+  background: var(--paper);
+  border-right: 4px solid var(--ink);
+  border-bottom: 4px solid var(--ink);
+  transform: skewX(-35deg) rotate(20deg);
+}
+.testimonial { margin-bottom: 0.5rem; }
+.testimonial figcaption { margin: 2rem 0 0 1rem; }
+
+/* ---------- Chips / buttons ---------- */
+.chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.chip {
+  background: var(--paper);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  padding: 0.05rem 0.7rem;
+  font-weight: 700;
+  margin: 0;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.15s, box-shadow 0.15s;
+}
+.chip--small { font-size: 0.9rem; background: var(--yellow); }
+
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--paper);
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 0.25rem 1.1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.btn:hover, .btn:focus-visible { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+.btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.btn--small { font-size: 1rem; padding: 0.1rem 0.8rem; background: var(--red); }
+
+.issue {
+  position: absolute;
+  top: -16px;
+  right: 14px;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  padding: 0 0.6rem;
+  font-size: 1.1rem;
+  transform: rotate(3deg);
+}
+
+.footer {
+  margin-top: 5rem;
+  text-align: center;
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+}
+
+
+
+/* ---------- FX layer (lightning, fist, hammer, impact) ---------- */
+.fx { position: absolute; pointer-events: none; z-index: 5; opacity: 0; }
+.fx svg { display: block; width: 100%; height: auto; }
+.fx--bolt { width: 46px; }
+.fx--bolt-l { left: -30px; top: -24px; transform: rotate(-12deg); }
+.fx--bolt-r { right: -30px; bottom: -24px; transform: rotate(12deg); }
+.fx--fist { width: 80px; top: -58px; right: 120px; transform: rotate(90deg); }
+.fx--hammer { width: 70px; top: -70px; right: 6px; transform-origin: 50% 92%; transform: rotate(20deg); }
+.fx--ring {
+  width: 70px; height: 70px; top: -14px; right: -4px;
+  border: 5px solid var(--yellow); border-radius: 50%;
+}
+.fx--impact {
+  top: -34px; right: -30px; width: 120px; aspect-ratio: 1;
+  display: grid; place-items: center;
+  background: var(--red); color: var(--yellow);
+  font-family: var(--font-display), Impact, sans-serif; font-size: 1.5rem;
+  -webkit-text-stroke: 1.5px var(--ink); text-shadow: 2px 2px 0 var(--ink);
+  clip-path: var(--star); transform: rotate(-10deg);
+}
+/* white flash overlay for the lightning panels */
+.panel[data-fx="lightning"]::after {
+  content: ""; position: absolute; inset: 0; background: #fff;
+  opacity: 0; pointer-events: none; z-index: 4;
+}
+
+/* ---------- Comic hover animations (desktop only, skipped if reduced motion) ---------- */
+@keyframes shake {
+  0%, 100% { transform: translate(0, 0) rotate(0); }
+  20% { transform: translate(-5px, 3px) rotate(-1.5deg); }
+  40% { transform: translate(5px, -3px) rotate(1.5deg); }
+  60% { transform: translate(-4px, -2px) rotate(-1deg); }
+  80% { transform: translate(4px, 2px) rotate(1deg); }
+}
+@keyframes pow {
+  0% { transform: rotate(-8deg) scale(1); }
+  30% { transform: rotate(6deg) scale(1.28); }
+  55% { transform: rotate(-12deg) scale(0.95); }
+  100% { transform: rotate(-4deg) scale(1.12); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(3deg); }
+  25% { transform: rotate(14deg) scale(1.15); }
+  50% { transform: rotate(-7deg); }
+  75% { transform: rotate(9deg); }
+}
+
+@keyframes flicker { 0% { opacity: 0; } 10% { opacity: 1; } 20% { opacity: 0; } 30% { opacity: 1; } 42% { opacity: 0; } 55%, 100% { opacity: 1; } }
+@keyframes zap { 0% { opacity: 0; } 8% { opacity: 0.85; } 16% { opacity: 0; } 28% { opacity: 0.6; } 36%, 100% { opacity: 0; } }
+@keyframes punch {
+  0% { opacity: 0; transform: translateY(-70px) rotate(90deg) scale(0.8); }
+  60% { opacity: 1; transform: translateY(10px) rotate(90deg) scale(1.15); }
+  100% { opacity: 1; transform: translateY(0) rotate(90deg) scale(1); }
+}
+@keyframes jolt {
+  0%, 100% { translate: 0 0; }
+  25% { translate: -5px 3px; }
+  50% { translate: 5px -3px; }
+  75% { translate: -3px 1px; }
+}
+@keyframes slam {
+  0% { opacity: 0; transform: rotate(-75deg) translateY(-20px); }
+  55% { opacity: 1; transform: rotate(30deg); }
+  70% { opacity: 1; transform: rotate(14deg); }
+  100% { opacity: 1; transform: rotate(20deg); }
+}
+@keyframes ring { 0% { opacity: 0; transform: scale(0.2); } 20% { opacity: 1; } 100% { opacity: 0; transform: scale(2.4); } }
+@keyframes bam {
+  0% { opacity: 0; transform: scale(0) rotate(-35deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-10deg); }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .panel:hover {
+    transform: rotate(var(--rot)) translate(-5px, -5px);
+    box-shadow: 13px 13px 0 var(--sh);
+  }
+  .caption:hover {
+    transform: rotate(2deg) scale(1.08);
+    box-shadow: 10px 10px 0 var(--ink);
+  }
+  .hero__title:hover { transform: rotate(2deg) scale(1.08); }
+  .hero__name:hover { animation: shake 0.4s linear; }
+  .burst:hover { animation: pow 0.5s forwards; }
+  .burst:hover .burst__a { display: none; }
+  .burst:hover .burst__b { display: inline; }
+  .bubble:hover { transform: scale(1.05) rotate(-1deg); }
+  .chip:hover {
+    transform: translateY(-3px) rotate(-4deg) scale(1.1);
+    background: var(--yellow);
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .chip--small:hover { background: var(--paper); }
+  .panel:hover .fx--bolt { animation: flicker 0.5s steps(1) forwards; }
+  .panel[data-fx="lightning"]:hover::after { animation: zap 0.45s steps(1); }
+  .panel:hover .fx--fist { animation: punch 0.45s cubic-bezier(0.2, 1.3, 0.4, 1) forwards; }
+  .panel[data-fx="fist"]:hover { animation: jolt 0.35s linear 0.22s; }
+  .panel:hover .fx--hammer { animation: slam 0.5s ease-in forwards; }
+  .panel:hover .fx--ring { animation: ring 0.6s ease-out 0.25s forwards; }
+  .panel[data-fx="hammer"]:hover { animation: jolt 0.35s linear 0.25s; }
+  .panel:hover .fx--impact { animation: bam 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+  .panel:hover .issue { animation: wiggle 0.45s ease-in-out; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero__art { order: -1; }
+  .burst { width: 200px; font-size: 2.2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
