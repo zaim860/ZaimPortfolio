@@ -13,6 +13,14 @@ export default function Experience() {
             <ul>
               {job.points.map((p) => <li key={p}>{p}</li>)}
             </ul>
+            {job.skills && job.skills.length > 0 && (
+              <>
+                <p className="skills-label">Skills used</p>
+                <ul className="chips">
+                  {job.skills.map((s) => <li key={s} className="chip chip--small">{s}</li>)}
+                </ul>
+              </>
+            )}
           </Panel>
         ))}
       </div>

@@ -8,7 +8,7 @@ export const profile = {
   title: "Information Technology Student",
   tagline: "Asipiring student that loves tech :).",
   intro:
-    "Hi! I'm a student who loves any kinds of technology and like to see how things work",
+    "Hi! I'm a student who loves history, games and any kinds of technology and like to see how things work",
   avatar: "", // e.g. "/me.jpg" (put the file in /public). Leave "" to show a comic burst instead.
   links: [
     { label: "Email", href: "mailto:zaimfadzly@gmail.com" },
@@ -56,7 +56,7 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const skills = [
-  { category: "Languages", items: ["JavaScript", "TypeScript", "Python", "Java", "C#"] },
+  { category: "Languages", items: ["JavaScript", "TypeScript", "Python", "Java", "C#", "SQL", "PHP"] },
   { category: "Web", items: ["React", "Next.js", "HTML", "CSS"] },
   { category: "Tools", items: ["Git", "GitHub", "Figma", "VS Code"] },
 ];
@@ -66,6 +66,7 @@ export const experience = [
     role: "Full Stack Intern",
     company: "First World Tech",
     period: "Oct 2023 - April 2024",
+    skills: ["HTML/CSS", "JavaScript", "PHP", "SQL"],
     points: [
       "Collaborated directly with a client representative to gather requirements, clarify expectations and guide the development of achildcare management web application intended for use across multiple childcare centres.",
       "Participated in scheduled client meetings and feature demonstrations to showcase implemented functionalities, gatherfeedback and align development with client requirements",
@@ -82,7 +83,7 @@ export const projects = [
     description: "UI/UX group project. A school study system",
     tags: ["Figma", "UI/UX Design"],
     links: [
-      { label: "Live", href: "https://www.figma.com/proto/FlAQ0oUhKTH6SOY20gMLFw/Group-4-Prototype--Copy-?node-id=2-783&p=f&t=hrWXtHp1jnig8UML-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A777&show-proto-sidebar=1" },
+      { label: "Live", href: "https://www.figma.com/proto/FlAQ0oUhKTH6SOY20gMLFw/Group-4-Prototype--Copy-?node-id=2-777&t=fC7MedJDZHcoBzE9-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A777" },
       { label: "Source", href: "https://www.figma.com/design/FlAQ0oUhKTH6SOY20gMLFw/Group-4-Prototype--Copy-?node-id=0-1&t=pcxe3FDYgek8dDQq-1" },
     ] as Link[],
   },
@@ -93,9 +94,9 @@ export const projects = [
     links: [{ label: "Source", href: "https://github.com/zaim860/valyria" }] as Link[],
   },
   {
-    title: "Project Three",
-    description: "Something you built for fun or to learn a new tool.",
-    tags: ["React"],
-    links: [] as Link[],
+    title: "CampusConnect",
+    description: "A campus social media platform that allows students to manage their budget and order food",
+    tags: ["HTML/CSS", "JavaScript", "SQL"],
+    links: [{ label: "Source", href: "https://github.com/zaim860/CampusConnect" }] as Link[],
   },
 ];
